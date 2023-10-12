@@ -1,0 +1,813 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0616829F2AD4BCAF008E5E17 /* StartRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */; };
+		0699AB522ABE4AD400E30B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0699AB502ABE4AD400E30B9D /* Main.storyboard */; };
+		0699AB542ABE4BC800E30B9D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699AB532ABE4BC800E30B9D /* StatsViewController.swift */; };
+		0699B1E52AC2196E00E25C3C /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699B1E42AC2196E00E25C3C /* Clubs.swift */; };
+		0699B1E72AC33D0E00E25C3C /* ParViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699B1E62AC33D0E00E25C3C /* ParViewController.swift */; };
+		0699B1E92AC36BEA00E25C3C /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699B1E82AC36BEA00E25C3C /* Scores.swift */; };
+		06F5D5E82ABE13AF001B5BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D5E72ABE13AF001B5BAF /* AppDelegate.swift */; };
+		06F5D5EA2ABE13AF001B5BAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D5E92ABE13AF001B5BAF /* SceneDelegate.swift */; };
+		06F5D5EC2ABE13AF001B5BAF /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D5EB2ABE13AF001B5BAF /* homeViewController.swift */; };
+		06F5D5F42ABE13B0001B5BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F5D5F32ABE13B0001B5BAF /* Assets.xcassets */; };
+		06F5D5F72ABE13B0001B5BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F5D5F52ABE13B0001B5BAF /* LaunchScreen.storyboard */; };
+		06F5D6022ABE13B0001B5BAF /* golfTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D6012ABE13B0001B5BAF /* golfTrackerTests.swift */; };
+		06F5D60C2ABE13B0001B5BAF /* golfTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D60B2ABE13B0001B5BAF /* golfTrackerUITests.swift */; };
+		06F5D60E2ABE13B0001B5BAF /* golfTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D60D2ABE13B0001B5BAF /* golfTrackerUITestsLaunchTests.swift */; };
+		6BA4433E02A82A63DE12F476 /* Pods_golfTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60AB3520E6E0B223F08575CE /* Pods_golfTrackerTests.framework */; };
+		787500109CEC41C68F9617B4 /* Pods_golfTracker_golfTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD6A1A781E00A438D30F0857 /* Pods_golfTracker_golfTrackerUITests.framework */; };
+		B986CBFDAB14523DDCFB7845 /* Pods_golfTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B47A6160A92F811C6AD778 /* Pods_golfTracker.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		06F5D5FE2ABE13B0001B5BAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F5D5DC2ABE13AF001B5BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F5D5E32ABE13AF001B5BAF;
+			remoteInfo = golfTracker;
+		};
+		06F5D6082ABE13B0001B5BAF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 06F5D5DC2ABE13AF001B5BAF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 06F5D5E32ABE13AF001B5BAF;
+			remoteInfo = golfTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartRoundViewController.swift; path = golfTracker/StartRoundViewController.swift; sourceTree = SOURCE_ROOT; };
+		0699AB512ABE4AD400E30B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0699AB532ABE4BC800E30B9D /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
+		0699B1E42AC2196E00E25C3C /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
+		0699B1E62AC33D0E00E25C3C /* ParViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParViewController.swift; sourceTree = "<group>"; };
+		0699B1E82AC36BEA00E25C3C /* Scores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scores.swift; sourceTree = "<group>"; };
+		06F5D5E42ABE13AF001B5BAF /* golfTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golfTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F5D5E72ABE13AF001B5BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		06F5D5E92ABE13AF001B5BAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		06F5D5EB2ABE13AF001B5BAF /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
+		06F5D5F32ABE13B0001B5BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		06F5D5F62ABE13B0001B5BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		06F5D5F82ABE13B0001B5BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06F5D5FD2ABE13B0001B5BAF /* golfTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = golfTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F5D6012ABE13B0001B5BAF /* golfTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfTrackerTests.swift; sourceTree = "<group>"; };
+		06F5D6072ABE13B0001B5BAF /* golfTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = golfTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		06F5D60B2ABE13B0001B5BAF /* golfTrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfTrackerUITests.swift; sourceTree = "<group>"; };
+		06F5D60D2ABE13B0001B5BAF /* golfTrackerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = golfTrackerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18CB140591A7CC7C5F6298F1 /* Pods-golfTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golfTracker.debug.xcconfig"; path = "Target Support Files/Pods-golfTracker/Pods-golfTracker.debug.xcconfig"; sourceTree = "<group>"; };
+		2983EC433B721CE3FEE8510A /* Pods-golfTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golfTracker.release.xcconfig"; path = "Target Support Files/Pods-golfTracker/Pods-golfTracker.release.xcconfig"; sourceTree = "<group>"; };
+		60AB3520E6E0B223F08575CE /* Pods_golfTrackerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golfTrackerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6744187211AEB1AA1C76825F /* Pods-golfTracker-golfTrackerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golfTracker-golfTrackerUITests.release.xcconfig"; path = "Target Support Files/Pods-golfTracker-golfTrackerUITests/Pods-golfTracker-golfTrackerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		775A8E14D990CDB92EDCE895 /* Pods-golfTrackerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golfTrackerTests.release.xcconfig"; path = "Target Support Files/Pods-golfTrackerTests/Pods-golfTrackerTests.release.xcconfig"; sourceTree = "<group>"; };
+		85B47A6160A92F811C6AD778 /* Pods_golfTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golfTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9DD95AC2A0A6F3AED59CA982 /* Pods-golfTrackerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golfTrackerTests.debug.xcconfig"; path = "Target Support Files/Pods-golfTrackerTests/Pods-golfTrackerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD29DCFF9F7359675BDDB715 /* Pods-golfTracker-golfTrackerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-golfTracker-golfTrackerUITests.debug.xcconfig"; path = "Target Support Files/Pods-golfTracker-golfTrackerUITests/Pods-golfTracker-golfTrackerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		DD6A1A781E00A438D30F0857 /* Pods_golfTracker_golfTrackerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_golfTracker_golfTrackerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		06F5D5E12ABE13AF001B5BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B986CBFDAB14523DDCFB7845 /* Pods_golfTracker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F5D5FA2ABE13B0001B5BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BA4433E02A82A63DE12F476 /* Pods_golfTrackerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F5D6042ABE13B0001B5BAF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				787500109CEC41C68F9617B4 /* Pods_golfTracker_golfTrackerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		06F5D5DB2ABE13AF001B5BAF = {
+			isa = PBXGroup;
+			children = (
+				06F5D5E62ABE13AF001B5BAF /* golfTracker */,
+				06F5D6002ABE13B0001B5BAF /* golfTrackerTests */,
+				06F5D60A2ABE13B0001B5BAF /* golfTrackerUITests */,
+				06F5D5E52ABE13AF001B5BAF /* Products */,
+				E77FFEA08AAAA26D991778A1 /* Pods */,
+				4C28CA34107B85D56B6C2D0B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		06F5D5E52ABE13AF001B5BAF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				06F5D5E42ABE13AF001B5BAF /* golfTracker.app */,
+				06F5D5FD2ABE13B0001B5BAF /* golfTrackerTests.xctest */,
+				06F5D6072ABE13B0001B5BAF /* golfTrackerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		06F5D5E62ABE13AF001B5BAF /* golfTracker */ = {
+			isa = PBXGroup;
+			children = (
+				06F5D61D2ABE13E1001B5BAF /* Model */,
+				06F5D61C2ABE13D4001B5BAF /* Views */,
+				06F5D61B2ABE13CE001B5BAF /* Controller */,
+				06F5D61A2ABE13C0001B5BAF /* Data Manager */,
+				06F5D5E72ABE13AF001B5BAF /* AppDelegate.swift */,
+				06F5D5E92ABE13AF001B5BAF /* SceneDelegate.swift */,
+				0699AB502ABE4AD400E30B9D /* Main.storyboard */,
+				06F5D5F52ABE13B0001B5BAF /* LaunchScreen.storyboard */,
+				06F5D5F32ABE13B0001B5BAF /* Assets.xcassets */,
+				06F5D5F82ABE13B0001B5BAF /* Info.plist */,
+			);
+			path = golfTracker;
+			sourceTree = "<group>";
+		};
+		06F5D6002ABE13B0001B5BAF /* golfTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				06F5D6012ABE13B0001B5BAF /* golfTrackerTests.swift */,
+			);
+			path = golfTrackerTests;
+			sourceTree = "<group>";
+		};
+		06F5D60A2ABE13B0001B5BAF /* golfTrackerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				06F5D60B2ABE13B0001B5BAF /* golfTrackerUITests.swift */,
+				06F5D60D2ABE13B0001B5BAF /* golfTrackerUITestsLaunchTests.swift */,
+			);
+			path = golfTrackerUITests;
+			sourceTree = "<group>";
+		};
+		06F5D61A2ABE13C0001B5BAF /* Data Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0699B1E42AC2196E00E25C3C /* Clubs.swift */,
+				0699B1E82AC36BEA00E25C3C /* Scores.swift */,
+			);
+			path = "Data Manager";
+			sourceTree = "<group>";
+		};
+		06F5D61B2ABE13CE001B5BAF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				06F5D5EB2ABE13AF001B5BAF /* homeViewController.swift */,
+				0699AB532ABE4BC800E30B9D /* StatsViewController.swift */,
+				0699B1E62AC33D0E00E25C3C /* ParViewController.swift */,
+				0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		06F5D61C2ABE13D4001B5BAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		06F5D61D2ABE13E1001B5BAF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C28CA34107B85D56B6C2D0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				85B47A6160A92F811C6AD778 /* Pods_golfTracker.framework */,
+				DD6A1A781E00A438D30F0857 /* Pods_golfTracker_golfTrackerUITests.framework */,
+				60AB3520E6E0B223F08575CE /* Pods_golfTrackerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E77FFEA08AAAA26D991778A1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18CB140591A7CC7C5F6298F1 /* Pods-golfTracker.debug.xcconfig */,
+				2983EC433B721CE3FEE8510A /* Pods-golfTracker.release.xcconfig */,
+				BD29DCFF9F7359675BDDB715 /* Pods-golfTracker-golfTrackerUITests.debug.xcconfig */,
+				6744187211AEB1AA1C76825F /* Pods-golfTracker-golfTrackerUITests.release.xcconfig */,
+				9DD95AC2A0A6F3AED59CA982 /* Pods-golfTrackerTests.debug.xcconfig */,
+				775A8E14D990CDB92EDCE895 /* Pods-golfTrackerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		06F5D5E32ABE13AF001B5BAF /* golfTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F5D6112ABE13B0001B5BAF /* Build configuration list for PBXNativeTarget "golfTracker" */;
+			buildPhases = (
+				DB8CA347EC94497F69294E5F /* [CP] Check Pods Manifest.lock */,
+				06F5D5E02ABE13AF001B5BAF /* Sources */,
+				06F5D5E12ABE13AF001B5BAF /* Frameworks */,
+				06F5D5E22ABE13AF001B5BAF /* Resources */,
+				BD496B97665C16C299DA05CE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = golfTracker;
+			productName = golfTracker;
+			productReference = 06F5D5E42ABE13AF001B5BAF /* golfTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		06F5D5FC2ABE13B0001B5BAF /* golfTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F5D6142ABE13B0001B5BAF /* Build configuration list for PBXNativeTarget "golfTrackerTests" */;
+			buildPhases = (
+				638DAB2035896E646796C44A /* [CP] Check Pods Manifest.lock */,
+				06F5D5F92ABE13B0001B5BAF /* Sources */,
+				06F5D5FA2ABE13B0001B5BAF /* Frameworks */,
+				06F5D5FB2ABE13B0001B5BAF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06F5D5FF2ABE13B0001B5BAF /* PBXTargetDependency */,
+			);
+			name = golfTrackerTests;
+			productName = golfTrackerTests;
+			productReference = 06F5D5FD2ABE13B0001B5BAF /* golfTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		06F5D6062ABE13B0001B5BAF /* golfTrackerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 06F5D6172ABE13B0001B5BAF /* Build configuration list for PBXNativeTarget "golfTrackerUITests" */;
+			buildPhases = (
+				6C51C386AB961C685A8B7159 /* [CP] Check Pods Manifest.lock */,
+				06F5D6032ABE13B0001B5BAF /* Sources */,
+				06F5D6042ABE13B0001B5BAF /* Frameworks */,
+				06F5D6052ABE13B0001B5BAF /* Resources */,
+				4A5181A73E2846E59AD73FB9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				06F5D6092ABE13B0001B5BAF /* PBXTargetDependency */,
+			);
+			name = golfTrackerUITests;
+			productName = golfTrackerUITests;
+			productReference = 06F5D6072ABE13B0001B5BAF /* golfTrackerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		06F5D5DC2ABE13AF001B5BAF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					06F5D5E32ABE13AF001B5BAF = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					06F5D5FC2ABE13B0001B5BAF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 06F5D5E32ABE13AF001B5BAF;
+					};
+					06F5D6062ABE13B0001B5BAF = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = 06F5D5E32ABE13AF001B5BAF;
+					};
+				};
+			};
+			buildConfigurationList = 06F5D5DF2ABE13AF001B5BAF /* Build configuration list for PBXProject "golfTracker" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 06F5D5DB2ABE13AF001B5BAF;
+			productRefGroup = 06F5D5E52ABE13AF001B5BAF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				06F5D5E32ABE13AF001B5BAF /* golfTracker */,
+				06F5D5FC2ABE13B0001B5BAF /* golfTrackerTests */,
+				06F5D6062ABE13B0001B5BAF /* golfTrackerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		06F5D5E22ABE13AF001B5BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0699AB522ABE4AD400E30B9D /* Main.storyboard in Resources */,
+				06F5D5F72ABE13B0001B5BAF /* LaunchScreen.storyboard in Resources */,
+				06F5D5F42ABE13B0001B5BAF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F5D5FB2ABE13B0001B5BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F5D6052ABE13B0001B5BAF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A5181A73E2846E59AD73FB9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golfTracker-golfTrackerUITests/Pods-golfTracker-golfTrackerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golfTracker-golfTrackerUITests/Pods-golfTracker-golfTrackerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-golfTracker-golfTrackerUITests/Pods-golfTracker-golfTrackerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		638DAB2035896E646796C44A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-golfTrackerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6C51C386AB961C685A8B7159 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-golfTracker-golfTrackerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD496B97665C16C299DA05CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golfTracker/Pods-golfTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-golfTracker/Pods-golfTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-golfTracker/Pods-golfTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB8CA347EC94497F69294E5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-golfTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06F5D5E02ABE13AF001B5BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0699B1E72AC33D0E00E25C3C /* ParViewController.swift in Sources */,
+				0699AB542ABE4BC800E30B9D /* StatsViewController.swift in Sources */,
+				0699B1E52AC2196E00E25C3C /* Clubs.swift in Sources */,
+				0699B1E92AC36BEA00E25C3C /* Scores.swift in Sources */,
+				06F5D5EC2ABE13AF001B5BAF /* homeViewController.swift in Sources */,
+				06F5D5E82ABE13AF001B5BAF /* AppDelegate.swift in Sources */,
+				0616829F2AD4BCAF008E5E17 /* StartRoundViewController.swift in Sources */,
+				06F5D5EA2ABE13AF001B5BAF /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F5D5F92ABE13B0001B5BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F5D6022ABE13B0001B5BAF /* golfTrackerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		06F5D6032ABE13B0001B5BAF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				06F5D60C2ABE13B0001B5BAF /* golfTrackerUITests.swift in Sources */,
+				06F5D60E2ABE13B0001B5BAF /* golfTrackerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		06F5D5FF2ABE13B0001B5BAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F5D5E32ABE13AF001B5BAF /* golfTracker */;
+			targetProxy = 06F5D5FE2ABE13B0001B5BAF /* PBXContainerItemProxy */;
+		};
+		06F5D6092ABE13B0001B5BAF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 06F5D5E32ABE13AF001B5BAF /* golfTracker */;
+			targetProxy = 06F5D6082ABE13B0001B5BAF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0699AB502ABE4AD400E30B9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0699AB512ABE4AD400E30B9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		06F5D5F52ABE13B0001B5BAF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				06F5D5F62ABE13B0001B5BAF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		06F5D60F2ABE13B0001B5BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		06F5D6102ABE13B0001B5BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		06F5D6122ABE13B0001B5BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18CB140591A7CC7C5F6298F1 /* Pods-golfTracker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DTKARPH32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = golfTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ndubauskas.golfTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		06F5D6132ABE13B0001B5BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2983EC433B721CE3FEE8510A /* Pods-golfTracker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DTKARPH32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = golfTracker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ndubauskas.golfTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		06F5D6152ABE13B0001B5BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DD95AC2A0A6F3AED59CA982 /* Pods-golfTrackerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DTKARPH32;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ndubauskas.golfTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/golfTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/golfTracker";
+			};
+			name = Debug;
+		};
+		06F5D6162ABE13B0001B5BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 775A8E14D990CDB92EDCE895 /* Pods-golfTrackerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DTKARPH32;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ndubauskas.golfTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/golfTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/golfTracker";
+			};
+			name = Release;
+		};
+		06F5D6182ABE13B0001B5BAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD29DCFF9F7359675BDDB715 /* Pods-golfTracker-golfTrackerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DTKARPH32;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ndubauskas.golfTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = golfTracker;
+			};
+			name = Debug;
+		};
+		06F5D6192ABE13B0001B5BAF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6744187211AEB1AA1C76825F /* Pods-golfTracker-golfTrackerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4DTKARPH32;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ndubauskas.golfTrackerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = golfTracker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		06F5D5DF2ABE13AF001B5BAF /* Build configuration list for PBXProject "golfTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F5D60F2ABE13B0001B5BAF /* Debug */,
+				06F5D6102ABE13B0001B5BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F5D6112ABE13B0001B5BAF /* Build configuration list for PBXNativeTarget "golfTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F5D6122ABE13B0001B5BAF /* Debug */,
+				06F5D6132ABE13B0001B5BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F5D6142ABE13B0001B5BAF /* Build configuration list for PBXNativeTarget "golfTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F5D6152ABE13B0001B5BAF /* Debug */,
+				06F5D6162ABE13B0001B5BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		06F5D6172ABE13B0001B5BAF /* Build configuration list for PBXNativeTarget "golfTrackerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				06F5D6182ABE13B0001B5BAF /* Debug */,
+				06F5D6192ABE13B0001B5BAF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 06F5D5DC2ABE13AF001B5BAF /* Project object */;
+}
