@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0616829F2AD4BCAF008E5E17 /* StartRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */; };
+		061682A12ADDBF69008E5E17 /* RoundClubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061682A02ADDBF69008E5E17 /* RoundClubs.swift */; };
+		061682A32ADDC003008E5E17 /* RoundScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061682A22ADDC003008E5E17 /* RoundScores.swift */; };
 		0699AB522ABE4AD400E30B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0699AB502ABE4AD400E30B9D /* Main.storyboard */; };
 		0699AB542ABE4BC800E30B9D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699AB532ABE4BC800E30B9D /* StatsViewController.swift */; };
 		0699B1E52AC2196E00E25C3C /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699B1E42AC2196E00E25C3C /* Clubs.swift */; };
@@ -45,6 +47,8 @@
 
 /* Begin PBXFileReference section */
 		0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartRoundViewController.swift; path = golfTracker/StartRoundViewController.swift; sourceTree = SOURCE_ROOT; };
+		061682A02ADDBF69008E5E17 /* RoundClubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundClubs.swift; sourceTree = "<group>"; };
+		061682A22ADDC003008E5E17 /* RoundScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundScores.swift; sourceTree = "<group>"; };
 		0699AB512ABE4AD400E30B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0699AB532ABE4BC800E30B9D /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		0699B1E42AC2196E00E25C3C /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
@@ -187,6 +191,8 @@
 		06F5D61D2ABE13E1001B5BAF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				061682A02ADDBF69008E5E17 /* RoundClubs.swift */,
+				061682A22ADDC003008E5E17 /* RoundScores.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -454,7 +460,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0699B1E72AC33D0E00E25C3C /* ParViewController.swift in Sources */,
+				061682A32ADDC003008E5E17 /* RoundScores.swift in Sources */,
 				0699AB542ABE4BC800E30B9D /* StatsViewController.swift in Sources */,
+				061682A12ADDBF69008E5E17 /* RoundClubs.swift in Sources */,
 				0699B1E52AC2196E00E25C3C /* Clubs.swift in Sources */,
 				0699B1E92AC36BEA00E25C3C /* Scores.swift in Sources */,
 				06F5D5EC2ABE13AF001B5BAF /* homeViewController.swift in Sources */,
