@@ -22,3 +22,5 @@ class Putter: Object{
     @objc dynamic var amountHit: Int = 0
     @objc dynamic var avgPutts: Float = 0.0
 }
+
+

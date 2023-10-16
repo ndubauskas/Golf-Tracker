@@ -180,7 +180,6 @@
         <!--Start Round View Controller-->
         <scene sceneID="rCQ-th-uMO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1SR-0T-7uh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="WzF-bb-gOs" customClass="StartRoundViewController" customModule="golfTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOr-uG-vlA">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
@@ -237,12 +236,15 @@
                                 <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="m8w-yO-WUv">
-                                <rect key="frame" x="285" y="294" width="74" height="32"/>
+                                <rect key="frame" x="286" y="294" width="74" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <segments>
                                     <segment title="" image="checkmark" catalog="system"/>
                                     <segment title="" image="xmark" catalog="system"/>
                                 </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="selectedSegmentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="01b-ZI-AdW">
                                 <rect key="frame" x="203" y="171" width="204" height="84"/>
@@ -317,8 +319,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hole Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="om1-Gh-fLM">
-                                        <rect key="frame" x="290" y="50" width="80" height="22"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hole Score:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="om1-Gh-fLM">
+                                        <rect key="frame" x="290" y="50" width="84" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -342,7 +344,7 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="clubSelectButton:" destination="WzF-bb-gOs" eventType="touchUpInside" id="buT-OL-IZ1"/>
+                                    <action selector="clubConfirmButton:" destination="WzF-bb-gOs" eventType="touchUpInside" id="0W2-Rb-qcw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -352,6 +354,7 @@
                     <navigationItem key="navigationItem" id="5dS-9d-a9w"/>
                     <connections>
                         <outlet property="clubSelectionLabel" destination="01b-ZI-AdW" id="s70-6g-L9a"/>
+                        <outlet property="confirmClubLabel" destination="bkm-34-PlE" id="7LJ-qY-cPe"/>
                         <outlet property="firSelectionLabel" destination="m8w-yO-WUv" id="mhx-RQ-pLS"/>
                         <outlet property="girSelectionLabel" destination="VKR-fi-dsk" id="iBN-YU-xTc"/>
                         <outlet property="holeNumberLabel" destination="YqZ-jR-djD" id="XdQ-uT-Fe3"/>
@@ -362,6 +365,7 @@
                         <segue destination="2xX-qH-qas" kind="show" identifier="goToEndRound" id="uYi-ac-Ri8"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1SR-0T-7uh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2655.1401869158876" y="3.2397408207343417"/>
         </scene>
