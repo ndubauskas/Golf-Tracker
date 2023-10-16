@@ -32,8 +32,9 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     var firCount: Int = 0
     var girHit: Int = 0
     var firHit: Int = 0
-    var firstPoint = CLLocation(latitude: 0, longitude: 0)
-    var secondPoint = CLLocation(latitude: 0, longitude:  0)
+    var distanceInYards: Double = 0
+    var firstPoint = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    var secondPoint = CLLocationCoordinate2D(latitude: 0, longitude: 0)
     let pickerView = UIPickerView()
     private var holeNumber: Int = 1
     private var holeScore: Int = 0
@@ -61,13 +62,20 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         pickerView.isOpaque = true
         pickerView.layer.opacity = 0.8
         pickerView.isHidden = true
+        confirmClubLabel.isHidden = true
         girSelectionLabel.isEnabled = false
         firSelectionLabel.isEnabled = false
+        girSelectionLabel.selectedSegmentIndex = 1
+        firSelectionLabel.selectedSegmentIndex = 1
+        
+        //firSelectionLabel.backgroundColor = UIColor.red
+        
+        holeScore = 0
         view.addSubview(pickerView)
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
            view.addGestureRecognizer(tapGestureRecognizer)
-        locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
+        locationManager.requestAlwaysAuthorization()
 
         
     }
@@ -75,6 +83,8 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBAction func clubSelectionButton(_ sender: Any) {
         
         pickerView.isHidden = !pickerView.isHidden
+        confirmClubLabel.isHidden = !confirmClubLabel.isHidden
+   
        
     }
     @IBOutlet weak var firSelectionLabel: UISegmentedControl!
@@ -89,12 +99,23 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
             let selectedItem = clubOptions[selectedRow]
             clubSelectionLabel.setTitle(selectedItem, for: .normal)
             pickerView.isHidden = true
+            confirmClubLabel.isHidden = true
+            pickerView.reloadAllComponents()
+            
 
         }
     }
-    @IBAction func clubSelectButton(_ sender: Any) {
+    @IBAction func clubConfirmButton(_ sender: Any) {
         pickerView.isHidden = true
+        confirmClubLabel.isHidden = true
+        
+        let selectedRow = pickerView.selectedRow(inComponent: 0)
+        let selectedItem = clubOptions[selectedRow]
+        clubSelectionLabel.setTitle(selectedItem, for: .normal)
+        pickerView.reloadAllComponents()
+        print("check")
     }
+    @IBOutlet weak var confirmClubLabel: UIButton!
     @IBOutlet weak var holeNumberLabel: UILabel!
 
     @IBOutlet weak var roundScoreLabel: UILabel!
@@ -102,8 +123,8 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet weak var parSelection: UISegmentedControl!
 
     @IBAction func nextShotButtonPressed(_ sender: Any) {
-        
-   
+
+  
         guard let clubString = clubSelectionLabel.titleLabel?.text else{
             fatalError("whoops")
  
@@ -112,22 +133,25 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
             print("Change dat club")
         }
         else if clubString == "Putter"{
+            getLocation()
+            logShot(clubString: clubString)
+            updateUI()
             girSelectionLabel.isEnabled = false
             firSelectionLabel.isEnabled = false
-            logShot(clubString: clubString)
+
+            
         }
         else{
            print(clubString)
+            print(holeScore)
+            getLocation()
             logShot(clubString: clubString)
+            updateUI()
             parSelection.isEnabled = false
-            holeScore += 1
-            roundScore += 1
-            holeScoreLabel.text = String(holeScore)
-            roundScoreLabel.text = String(roundScore)
             girSelectionLabel.isEnabled = true
             firSelectionLabel.isEnabled = true
+ 
         }
-        
         
     }
 
@@ -138,6 +162,12 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         parSelection.isEnabled = true
         clubSelectionLabel.setTitle("Select Club", for: .normal)
         checkInRegulation()
+        girSelectionLabel.selectedSegmentIndex = 1
+        firSelectionLabel.selectedSegmentIndex = 1
+        firSelectionLabel.isEnabled = false
+        girSelectionLabel.isEnabled = false
+        firstPoint.latitude = 0
+        firstPoint.longitude = 0
         if nextHoleLabel.currentTitle == "End Round"{
             calcRound()
         }
@@ -189,6 +219,7 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     func logShot(clubString: String){
+       
         var clubDictionay = [String: Clubs]()
         
         if let driver = driver {
@@ -237,12 +268,13 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
 
         if let currentClub = clubSelectionLabel.titleLabel?.text {
             if let club = clubDictionay[currentClub] {
-                let amountHit = club.amountHit
-                print("Amount Hit for \(currentClub): \(amountHit)")
+                holeScore += 1
+                roundScore += 1
                 do{
                     print("writting to realm")
                     try realm.write{
                         club.amountHit += 1
+                
                     }
                 }catch{
                     print("saddness cant write to realm")
@@ -251,9 +283,13 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
                 print("Club not found in the dictionary")
             }
         }
-
+        
     }
-    
+    func updateUI(){
+        
+        holeScoreLabel.text = String(holeScore)
+        roundScoreLabel.text = String(roundScore)
+    }
     func fetchClubs(){
 
         driver = realm.objects(Clubs.self).filter("name == 'Driver'").first
@@ -294,12 +330,27 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
                 
             }
         }
-    func calcDistance(){
-        let distanceInMeters = firstPoint.distance(from: secondPoint)
+    func calcDistance(firstPoint: CLLocationCoordinate2D, secondPoint: CLLocationCoordinate2D)-> Double{
+             
+        
+            let R = 6371000.0
+            let lat1 = firstPoint.latitude * .pi / 180.0
+            let lon1 = firstPoint.longitude * .pi / 180.0
+            let lat2 = secondPoint.latitude * .pi / 180.0
+            let lon2 = secondPoint.longitude * .pi / 180.0
 
-        // Convert meters to yards (1 meter = 1.09361 yards)
-        let distanceInYards = distanceInMeters * 1.09361
-    }
+            let dLat = lat2 - lat1
+            let dLon = lon2 - lon1
+
+            let a = sin(dLat/2) * sin(dLat/2) + cos(lat1) * cos(lat2) * sin(dLon/2) * sin(dLon/2)
+            let c = 2 * atan2(sqrt(a), sqrt(1-a))
+            let distance = R * c
+            let distanceInYards = distance * 1.09361
+            return Double(distanceInYards)
+    
+        }
+    
+
     
 }
 //MARK: - PickerView
@@ -325,38 +376,59 @@ extension StartRoundViewController{
     }
     
 }
-
+//MARK: - CLLLocationManagerDelegate
 extension StartRoundViewController: CLLocationManagerDelegate{
 
-
+    func isCoordinateZero(coordinate: CLLocationCoordinate2D) -> Bool {
+        let coordinate = coordinate
+        return coordinate.latitude == 0.0 && coordinate.longitude == 0.0
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else {
-            return
+        
+        if let location = locations.last {
+            let latitude = location.coordinate.latitude
+            let longitude = location.coordinate.longitude
+            let isFirstPointZero = isCoordinateZero(coordinate: firstPoint)
+            
+            if isFirstPointZero == true {
+                print("setting first point")
+                firstPoint = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                print("First shot Lat->\(firstPoint.latitude)")
+                print("Lon-> \(firstPoint.longitude)")
+                
+            }
+            else{
+                secondPoint = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+                
+                //distanceInYards = calcDistance(firstPoint: firstPoint, secondPoint: secondPoint)
+                let firstPoint = CLLocationCoordinate2D(latitude: 40.0, longitude: -75.0)
+                var secondPoint = CLLocationCoordinate2D(latitude: 90.0, longitude: -125.0)
+
+                    // Calculate the difference
+                distanceInYards = calcDistance(firstPoint: firstPoint, secondPoint: secondPoint)
+                print("ACTUAL DISTANCE IN YARDS \(distanceInYards)")
+            }
+           
         }
-
-        let latitude = location.coordinate.latitude
-        let longitude = location.coordinate.longitude
-
-        print("Latitude: \(latitude), Longitude: \(longitude)")
+        
+        stopLocationUpdates()
     }
-    func handleLocationUpdate(_ location: CLLocation) {
-        let latitude = location.coordinate.latitude
-        let longitude = location.coordinate.longitude
-        print("Latitude: \(latitude), Longitude: \(longitude)")
-
-        // Add any additional actions you want to perform with the location data here
-    }
-
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        // Handle error
+ 
         print("Location error: \(error.localizedDescription)")
     }
 
     func stopLocationUpdates() {
         locationManager.stopUpdatingLocation()
     }
-//    locationManager.startUpdatingLocation() // Start
-//    locationManager.stopUpdatingLocation() // Stop
+
+    func getLocation(){
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.startUpdatingLocation()
+
+    }
 
 
 }
