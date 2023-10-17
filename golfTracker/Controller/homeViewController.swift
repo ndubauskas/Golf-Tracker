@@ -59,6 +59,7 @@ class homeViewController: UIViewController {
                 parVC.sandWedge = sandWedge
                 parVC.lobWedge = lobWedge
                 parVC.putter = putter
+                
             }
         }
 //        if segue.identifier == "goToStats"{
@@ -166,6 +167,7 @@ class homeViewController: UIViewController {
             putter.amountHit = 0
             do{
                 try realm.write{
+                    print("ADDING CLUBS")
                     realm.add(driver)
                     realm.add(threeWood)
                     realm.add(hybrid)

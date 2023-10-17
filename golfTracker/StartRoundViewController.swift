@@ -10,6 +10,36 @@ import CoreLocation
 class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate{
    
 
+    var driverRound = RoundClubs(name: "Driver")
+    var threeWoodRound = RoundClubs(name: "3 Wood")
+    var hybridRound = RoundClubs(name: "Hybrid")
+    var fourIronRound = RoundClubs(name: "4 Iron")
+    var fiveIronRound = RoundClubs(name: "5 Iron")
+    var sixIronRound = RoundClubs(name: "6 Iron")
+    var sevenIronRound = RoundClubs(name: "7 Iron")
+    var eightIronRound = RoundClubs(name: "8 Iron")
+    var nineIronRound = RoundClubs(name: "9 Iron")
+    var pitchWedgeRound = RoundClubs(name: "Pitching Wedge")
+    var approachWedgeRound = RoundClubs(name: "Approach Wedge")
+    var sandWedgeRound = RoundClubs(name: "Sand Wedge")
+    var lobWedgeRound = RoundClubs(name: "Lob Wedge")
+    var putterRound = RoundClubs(name: "Putter")
+//    var driverRound = RoundClubs(name: "Driver")
+//    var threeWoodRound = RoundClubs(name: "ThreeWood")
+//    var hybridRound = RoundClubs(name: "Hybrid")
+//    var fourIronRound = RoundClubs(name: "FourIron")
+//    var fiveIronRound = RoundClubs(name: "FiveIron")
+//    var sixIronRound = RoundClubs(name: "SixIron")
+//    var sevenIronRound = RoundClubs(name: "SevenIron")
+//    var eightIronRound = RoundClubs(name: "EightIron")
+//    var nineIronRound = RoundClubs(name: "NineIron")
+//    var pitchWedgeRound = RoundClubs(name: "PitchWedge")
+//    var approachWedgeRound = RoundClubs(name: "ApproachWedge")
+//    var sandWedgeRound = RoundClubs(name: "SandWedge")
+//    var lobWedgeRound = RoundClubs(name: "LobWedge")
+//    var putterRound = RoundClubs(name: "Putter")
+    var roundClubArray: [RoundClubs] = []
+    
     var realm = try! Realm()
     var dataToPass: Results<Clubs>?
     var clubs: Results<Clubs>?
@@ -51,7 +81,10 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchClubs()
+        
+        clubs = realm.objects(Clubs.self)
+
+       //fetchClubs()
         fetchRoundStats()
         roundPar = UserDefaults.standard.integer(forKey: "roundPar")
         holeNumberLabel.text = "1"
@@ -68,6 +101,20 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         girSelectionLabel.selectedSegmentIndex = 1
         firSelectionLabel.selectedSegmentIndex = 1
         
+        roundClubArray.append(driverRound)
+        roundClubArray.append(threeWoodRound)
+        roundClubArray.append(hybridRound)
+        roundClubArray.append(fourIronRound)
+        roundClubArray.append(fiveIronRound)
+        roundClubArray.append(sixIronRound)
+        roundClubArray.append(sevenIronRound)
+        roundClubArray.append(eightIronRound)
+        roundClubArray.append(nineIronRound)
+        roundClubArray.append(pitchWedgeRound)
+        roundClubArray.append(approachWedgeRound)
+        roundClubArray.append(sandWedgeRound)
+        roundClubArray.append(lobWedgeRound)
+        roundClubArray.append(putterRound)
         //firSelectionLabel.backgroundColor = UIColor.red
         
         holeScore = 0
@@ -76,7 +123,6 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
            view.addGestureRecognizer(tapGestureRecognizer)
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-
         
     }
 
@@ -113,7 +159,7 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         let selectedItem = clubOptions[selectedRow]
         clubSelectionLabel.setTitle(selectedItem, for: .normal)
         pickerView.reloadAllComponents()
-        print("check")
+
     }
     @IBOutlet weak var confirmClubLabel: UIButton!
     @IBOutlet weak var holeNumberLabel: UILabel!
@@ -122,6 +168,7 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     @IBOutlet weak var holeScoreLabel: UILabel!
     @IBOutlet weak var parSelection: UISegmentedControl!
 
+    
     @IBAction func nextShotButtonPressed(_ sender: Any) {
 
   
@@ -129,7 +176,11 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
             fatalError("whoops")
  
         }
-        if clubString == "Change Club"{
+        
+//        if clubString == "Change Club"{
+//            print("Change dat club")
+//        }
+        if clubString == "CHANGE THIS LATER UNCOMMENT ABOVE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"{
             print("Change dat club")
         }
         else if clubString == "Putter"{
@@ -169,6 +220,9 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         firstPoint.latitude = 0
         firstPoint.longitude = 0
         if nextHoleLabel.currentTitle == "End Round"{
+            if let test = threeWood{
+                print(test.name)
+            }
             calcRound()
         }
         if holeNumber == 18 {
@@ -199,18 +253,84 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         girCount += 1
         
     }
-    func calcRound(){
+    func mapClubNames(_ roundClubName: String)-> String{
         
-        do{
-            try realm.write{
-                
-            }
-        }catch{
-            fatalError("Cannot calc round")
+        
+        let mappings: [String: String] = [
+            "Driver": "Driver",
+            "3 Wood": "ThreeWood",
+            "Hybrid": "Hybrid",
+            "4 Iron": "FourIron",
+            "5 Iron": "FiveIron",
+            "6 Iron": "SixIron",
+            "7 Iron": "SevenIron",
+            "8 Iron": "EightIron",
+            "9 Iron": "NineIron",
+            "Pitching Wedge": "PitchWedge",
+            "Approach Wedge": "ApproachWedge",
+            "Sand Wedge": "SandWedge",
+            "Lob Wedge": "LobWedge",
+            "Putter": "Putter"
+            ]
+        
+        if let mappedName = mappings[roundClubName] {
+            return mappedName
+        } else {
+            
+            return roundClubName.replacingOccurrences(of: " ", with: "")
         }
-        performSegue(withIdentifier: "goToEndRound", sender: self)
+    }
+    func calcRound(){
+        for roundClub in roundClubArray{
+        //   if  !roundClub.name.isEmpty {
+          
+            
+                let mappedName = mapClubNames(roundClub.name)
+
+               if let realmClub = clubs?.first(where: { $0.name == mappedName }){
+               let totalHit =  realmClub.amountHit + roundClub.amountHit
+                   
+                   print("realm amount his \(totalHit)")
+
+                    do{
+                        try realm.write{
+                            realmClub.amountHit += roundClub.amountHit
+                            realmClub.avgDistance = roundClub.totalDistance / Double(totalHit)
+                            realmClub.longestDistance = Int(roundClub.longestDistance)
+                        }
+                        
+                    }catch{
+                        print("cant add to realm")
+                    }
+               // }
+            }
+        }
+    
+        
+        performSegue(withIdentifier: "goToFinishedRound", sender: self)
+       
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToFinishedRound"{
+            if let finishedRoundVC = segue.destination as? FinishedRoundCollectionViewController{
+                finishedRoundVC.driver = driver
+                finishedRoundVC.threeWood = threeWood
+                finishedRoundVC.hybrid = hybrid
+                finishedRoundVC.fourIron = fourIron
+                finishedRoundVC.fiveIron = fiveIron
+                finishedRoundVC.sixIron = sixIron
+                finishedRoundVC.sevenIron = sevenIron
+                finishedRoundVC.eightIron = eightIron
+                finishedRoundVC.nineIron = nineIron
+                finishedRoundVC.pitchWedge = pitchWedge
+                finishedRoundVC.approachWedge = approachWedge
+                finishedRoundVC.sandWedge = sandWedge
+                finishedRoundVC.lobWedge = lobWedge
+                finishedRoundVC.putter = putter
+            }
+        }
+    }
     func changeHoleNumber() -> String{
         holeNumber += 1
         holeScoreLabel.text = "0"
@@ -219,78 +339,34 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     func logShot(clubString: String){
-       
-        var clubDictionay = [String: Clubs]()
-        
-        if let driver = driver {
-            clubDictionay["Driver"] = driver
-        }
-        if let threeWood = threeWood {
-            clubDictionay["3 Wood"] = threeWood
-        }
-        if let hybrid = hybrid {
-            clubDictionay["Hybrid"] = hybrid
-        }
-        
-        if let fourIron = fourIron {
-            clubDictionay["4 Iron"] = fourIron
-        }
-        if let fiveIron = fiveIron {
-            clubDictionay["5 Iron"] = fiveIron
-        }
-        if let sixIron = sixIron {
-            clubDictionay["6 Iron"] = sixIron
-        }
-        if let sevenIron = sevenIron {
-            clubDictionay["6 Iron"] = sevenIron
-        }
-        if let eightIron = eightIron {
-            clubDictionay["8 Iron"] = eightIron
-        }
-        if let nineIron = nineIron {
-            clubDictionay["9 Iron"] = nineIron
-        }
-        if let pitchWedge = pitchWedge {
-            clubDictionay["Pitching Wedge"] = pitchWedge
-        }
-        if let approachWedge = approachWedge {
-            clubDictionay["Approach Wedge"] = approachWedge
-        }
-        if let sandWedge = sandWedge {
-            clubDictionay["Sand Wedge"] = sandWedge
-        }
-        if let lobWedge = lobWedge {
-            clubDictionay["Lob Wedge"] = lobWedge
-        }
-        if let putter = putter {
-            clubDictionay["Putter"] = putter
-        }
+       print("logging shot")
 
         if let currentClub = clubSelectionLabel.titleLabel?.text {
-            if let club = clubDictionay[currentClub] {
+            print("CURRENT CLUB: \(currentClub)")
+            if let index = roundClubArray.firstIndex(where: {$0.name == currentClub}){
+               // if let club = clubDictionary[currentClub] {
+                print("before \(roundClubArray[index].amountHit)")
                 holeScore += 1
                 roundScore += 1
-                do{
-                    print("writting to realm")
-                    try realm.write{
-                        club.amountHit += 1
-                
-                    }
-                }catch{
-                    print("saddness cant write to realm")
+                roundClubArray[index].amountHit += 1
+                roundClubArray[index].totalDistance += distanceInYards
+                if roundClubArray[index].longestDistance < distanceInYards{
+                    roundClubArray[index].longestDistance = distanceInYards
                 }
-            } else {
-                print("Club not found in the dictionary")
-            }
+                //MARK: - ||| TEST FOR USING PHONE |||
+                print("Distance in yards for logshot\(distanceInYards)")
+                print("after \(  roundClubArray[index].amountHit)")
+           
+
+                }
         }
-        
     }
     func updateUI(){
         
         holeScoreLabel.text = String(holeScore)
         roundScoreLabel.text = String(roundScore)
     }
-    func fetchClubs(){
+   func fetchClubs(){
 
         driver = realm.objects(Clubs.self).filter("name == 'Driver'").first
         threeWood = realm.objects(Clubs.self).filter("name == 'ThreeWood'").first
@@ -306,7 +382,8 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         sandWedge = realm.objects(Clubs.self).filter("name == 'SandWedge'").first
         lobWedge = realm.objects(Clubs.self).filter("name == 'LobWedge'").first
         putter = realm.objects(Clubs.self).filter("name == 'Putter'").first
-       
+     
+
     }
     func fetchRoundStats(){
         
@@ -353,6 +430,7 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
 
     
 }
+
 //MARK: - PickerView
 extension StartRoundViewController{
  
@@ -401,13 +479,10 @@ extension StartRoundViewController: CLLocationManagerDelegate{
             else{
                 secondPoint = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
                 
-                //distanceInYards = calcDistance(firstPoint: firstPoint, secondPoint: secondPoint)
-                let firstPoint = CLLocationCoordinate2D(latitude: 40.0, longitude: -75.0)
-                var secondPoint = CLLocationCoordinate2D(latitude: 90.0, longitude: -125.0)
-
-                    // Calculate the difference
                 distanceInYards = calcDistance(firstPoint: firstPoint, secondPoint: secondPoint)
+             
                 print("ACTUAL DISTANCE IN YARDS \(distanceInYards)")
+                firstPoint = secondPoint
             }
            
         }

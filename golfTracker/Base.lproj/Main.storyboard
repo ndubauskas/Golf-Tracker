@@ -362,17 +362,17 @@
                         <outlet property="nextHoleLabel" destination="sUs-Kb-FIf" id="nlH-n0-28A"/>
                         <outlet property="parSelection" destination="hKV-bw-dGh" id="Tza-S4-SoG"/>
                         <outlet property="roundScoreLabel" destination="h9I-be-u5Q" id="6s9-Ux-qPT"/>
-                        <segue destination="2xX-qH-qas" kind="show" identifier="goToEndRound" id="uYi-ac-Ri8"/>
+                        <segue destination="2xX-qH-qas" kind="show" identifier="goToFinishedRound" id="uYi-ac-Ri8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1SR-0T-7uh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2655.1401869158876" y="3.2397408207343417"/>
         </scene>
-        <!--Collection View Controller-->
+        <!--Finished Round Collection View Controller-->
         <scene sceneID="HUS-K0-YXp">
             <objects>
-                <collectionViewController id="2xX-qH-qas" sceneMemberID="viewController">
+                <collectionViewController id="2xX-qH-qas" customClass="FinishedRoundCollectionViewController" customModule="golfTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="U2W-cJ-R7t">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
