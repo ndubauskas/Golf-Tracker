@@ -33,9 +33,12 @@ class homeViewController: UIViewController {
         super.viewDidLoad()
         fetchClubs()
         loadClubs()
+       
     }
 
     
+  
+   
     @IBAction func playButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "goToPar", sender: self)
    

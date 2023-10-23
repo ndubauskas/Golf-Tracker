@@ -12,7 +12,6 @@ class StatsViewController: UITableViewController {
     
     var clubs: Results<Clubs>?
     let realm = try! Realm()
-    var dataToDisplay: Results<Clubs>?
  
     var driver: Clubs?
     var threeWood: Clubs?

@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           }
 
                 let config = Realm.Configuration(
-                    schemaVersion: 10
+                    schemaVersion: 1
               )
 
          Realm.Configuration.defaultConfiguration = config

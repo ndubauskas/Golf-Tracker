@@ -24,22 +24,8 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     var sandWedgeRound = RoundClubs(name: "Sand Wedge")
     var lobWedgeRound = RoundClubs(name: "Lob Wedge")
     var putterRound = RoundClubs(name: "Putter")
-//    var driverRound = RoundClubs(name: "Driver")
-//    var threeWoodRound = RoundClubs(name: "ThreeWood")
-//    var hybridRound = RoundClubs(name: "Hybrid")
-//    var fourIronRound = RoundClubs(name: "FourIron")
-//    var fiveIronRound = RoundClubs(name: "FiveIron")
-//    var sixIronRound = RoundClubs(name: "SixIron")
-//    var sevenIronRound = RoundClubs(name: "SevenIron")
-//    var eightIronRound = RoundClubs(name: "EightIron")
-//    var nineIronRound = RoundClubs(name: "NineIron")
-//    var pitchWedgeRound = RoundClubs(name: "PitchWedge")
-//    var approachWedgeRound = RoundClubs(name: "ApproachWedge")
-//    var sandWedgeRound = RoundClubs(name: "SandWedge")
-//    var lobWedgeRound = RoundClubs(name: "LobWedge")
-//    var putterRound = RoundClubs(name: "Putter")
     var roundClubArray: [RoundClubs] = []
-    
+    var putterHitAmount = 0
     var realm = try! Realm()
     var dataToPass: Results<Clubs>?
     var clubs: Results<Clubs>?
@@ -58,6 +44,8 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     var lobWedge: Clubs?
     var putter: Clubs?
     var roundStats: RoundStats?
+    var putts: Putter?
+    var scores : Scores?
     var girCount: Int = 0
     var firCount: Int = 0
     var girHit: Int = 0
@@ -83,8 +71,10 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         super.viewDidLoad()
         
         clubs = realm.objects(Clubs.self)
-
-       //fetchClubs()
+        roundStats = realm.objects(RoundStats.self).first
+        putts = realm.objects(Putter.self).first
+        scores = realm.objects(Scores.self).first
+        fetchClubs()
         fetchRoundStats()
         roundPar = UserDefaults.standard.integer(forKey: "roundPar")
         holeNumberLabel.text = "1"
@@ -189,6 +179,7 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
             updateUI()
             girSelectionLabel.isEnabled = false
             firSelectionLabel.isEnabled = false
+            putterHitAmount += 1
 
             
         }
@@ -240,11 +231,12 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
 
         if girLabel == 0 {
             girHit += 1
+            print("gir hit!!!")
         }
         if firLabel == 0 && (parLabel == "PAR 4" || parLabel == "PAR 5"){
             firHit += 1
             firCount += 1
-            
+            print("fir hit@@@@")
         }
         else if firLabel == 1 && (parLabel == "PAR 4" || parLabel == "PAR 5"){
             firCount += 1
@@ -281,16 +273,69 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         }
     }
     func calcRound(){
+        if let scores = scores{
+            
+            var newLowScore = scores.lowestScore
+            
+            if roundScore < newLowScore{
+                newLowScore = roundScore
+            }
+          print("in scores NEW SCORE \(newLowScore)")
+            if let putts = putts{
+                
+                do{
+                    try realm.write{
+                      print("in realm writing for putts")
+                        scores.avgScore = Double(roundScore + scores.totalScore) / Double(scores.totalRounds + 1)
+                        putts.avgPuttsPerRound = Double(putterHitAmount + putts.totalAmountOfPutts) / Double(scores.totalRounds + 1)
+                        putts.totalAmountOfPutts += putterHitAmount
+                        scores.totalScore += roundScore
+                        scores.lowestScore = newLowScore
+                        scores.totalRounds += 1
+                        
+                    }
+                }catch{
+                    print("cant write putts or scores")
+                }
+            }
+        }
+        
+        print("gir count in calcRound \(girCount)")
+        print("GIR hit in calcRound \(girHit)")
+       if let stats = roundStats {
+            let girAvg = Double(stats.totalGIRHit + girHit) / Double(stats.totalGIR + girCount)
+            let firAvg = Double(stats.totalFIRHit + firHit) / Double(stats.totalFIR + firCount)
+            print("AVG GIR \(girAvg)@@@@@@@@@@@@@@@@@")
+           print("AVG fir \(firAvg)!!!!!!!!!!!!!!!!!!!!!")
+           print("ROUNDSTATS TOTAL GIR HIT \(stats.totalGIRHit)")
+            print("ROUNDSTATS TOTAL FFFFFIR HIT \(stats.totalFIRHit)")
+            print("GIR COUNT FOR ROUND \(girCount) ")
+            do{
+                try realm.write{
+                    stats.totalGIR += girCount
+                    stats.totalFIR += firCount
+                    stats.girAvg = girAvg
+                    stats.firAvg = firAvg
+                    stats.totalGIRHit = girHit
+                    stats.totalFIRHit = firHit
+                }
+            }catch{
+                print("cant write to roundScores realm")
+            }
+        }           else{
+            print("Rounstats is nil")
+        }
+
         for roundClub in roundClubArray{
         //   if  !roundClub.name.isEmpty {
           
-            
+                
                 let mappedName = mapClubNames(roundClub.name)
-
+    
                if let realmClub = clubs?.first(where: { $0.name == mappedName }){
                let totalHit =  realmClub.amountHit + roundClub.amountHit
                    
-                   print("realm amount his \(totalHit)")
+//                   print("realm amount his \(totalHit)")
 
                     do{
                         try realm.write{
@@ -307,27 +352,50 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         }
     
         
-        performSegue(withIdentifier: "goToFinishedRound", sender: self)
+//        performSegue(withIdentifier: "goToFinishedRound", sender: self)
+        performSegue(withIdentifier: "goToEndRound", sender: self)
+        
        
     }
     
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "goToFinishedRound"{
+//            if let finishedRoundVC = segue.destination as? FinishedRoundViewController{
+//                finishedRoundVC.driver = driver
+//                finishedRoundVC.threeWood = threeWood
+//                finishedRoundVC.hybrid = hybrid
+//                finishedRoundVC.fourIron = fourIron
+//                finishedRoundVC.fiveIron = fiveIron
+//                finishedRoundVC.sixIron = sixIron
+//                finishedRoundVC.sevenIron = sevenIron
+//                finishedRoundVC.eightIron = eightIron
+//                finishedRoundVC.nineIron = nineIron
+//                finishedRoundVC.pitchWedge = pitchWedge
+//                finishedRoundVC.approachWedge = approachWedge
+//                finishedRoundVC.sandWedge = sandWedge
+//                finishedRoundVC.lobWedge = lobWedge
+//                finishedRoundVC.putter = putter
+//                finishedRoundVC.putts = putts
+//                finishedRoundVC.roundStats = roundStats
+//                finishedRoundVC.girCount = girCount
+//                finishedRoundVC.girHit = girHit
+//                finishedRoundVC.firCount = firCount
+//                finishedRoundVC.firHit = firHit
+//                finishedRoundVC.roundScore = roundScore
+//            }
+//        }
+//    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "goToFinishedRound"{
-            if let finishedRoundVC = segue.destination as? FinishedRoundCollectionViewController{
-                finishedRoundVC.driver = driver
-                finishedRoundVC.threeWood = threeWood
-                finishedRoundVC.hybrid = hybrid
-                finishedRoundVC.fourIron = fourIron
-                finishedRoundVC.fiveIron = fiveIron
-                finishedRoundVC.sixIron = sixIron
-                finishedRoundVC.sevenIron = sevenIron
-                finishedRoundVC.eightIron = eightIron
-                finishedRoundVC.nineIron = nineIron
-                finishedRoundVC.pitchWedge = pitchWedge
-                finishedRoundVC.approachWedge = approachWedge
-                finishedRoundVC.sandWedge = sandWedge
-                finishedRoundVC.lobWedge = lobWedge
-                finishedRoundVC.putter = putter
+        if segue.identifier == "goToEndRound"{
+            if let endRoundVC = segue.destination as? EndRoundCollectionViewController{
+               
+                endRoundVC.girCount = girCount
+                endRoundVC.girHit = girHit
+                endRoundVC.firCount = firCount
+                endRoundVC.firHit = firHit
+                endRoundVC.roundPar = roundPar
+                endRoundVC.roundScore = roundScore
+                endRoundVC.putterHitAmount = putterHitAmount
             }
         }
     }
@@ -339,13 +407,13 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
     }
     
     func logShot(clubString: String){
-       print("logging shot")
+     //  print("logging shot")
 
         if let currentClub = clubSelectionLabel.titleLabel?.text {
-            print("CURRENT CLUB: \(currentClub)")
+           // print("CURRENT CLUB: \(currentClub)")
             if let index = roundClubArray.firstIndex(where: {$0.name == currentClub}){
                // if let club = clubDictionary[currentClub] {
-                print("before \(roundClubArray[index].amountHit)")
+              //  print("before \(roundClubArray[index].amountHit)")
                 holeScore += 1
                 roundScore += 1
                 roundClubArray[index].amountHit += 1
@@ -382,30 +450,64 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         sandWedge = realm.objects(Clubs.self).filter("name == 'SandWedge'").first
         lobWedge = realm.objects(Clubs.self).filter("name == 'LobWedge'").first
         putter = realm.objects(Clubs.self).filter("name == 'Putter'").first
-     
+        
 
     }
     func fetchRoundStats(){
         
-        if realm.objects(RoundStats.self).isEmpty{
-            
-            let roundStats = RoundStats()
-            roundStats.greenInReg = 0
-            roundStats.fairwaysInReg = 0
-            roundStats.numberOfPutts = 0.0
-            roundStats.girAvg = 0.0
-            roundStats.firAvg = 0.0
+        if realm.objects(Scores.self).isEmpty{
+            let score = Scores()
+            score.lowestScore = 500
+            score.avgScore = 0.0
+            score.totalRounds = 0
+            score.totalScore = 0
+            do{
+                try realm.write{
+                    realm.add(score)
+                }
+            }catch{
+                print("cant add first score into realm")
+            }
+        }
+        if realm.objects(Putter.self).isEmpty{
+            let putts = Putter()
+            putts.avgPuttsPerRound = 0.0
+            putts.totalAmountOfPutts = 0
             
             do{
                 try realm.write{
-                        realm.add(roundStats)
-                    }
+                    realm.add(putts)
                 }
+            }catch{
+                print("cant add putts to realm")
+            }
+        }
+        if realm.objects(RoundStats.self).isEmpty{
+            
+            let newRoundStats = RoundStats()
+            newRoundStats.totalGIR = 0
+            newRoundStats.totalFIR = 0
+            newRoundStats.totalGIRHit = 0
+            newRoundStats.totalFIRHit = 0
+            newRoundStats.girAvg = 0.0
+            newRoundStats.firAvg = 0.0
+            
+            
+            do{
+                try realm.write{
+                        realm.add(newRoundStats)
+                    }
+                roundStats = newRoundStats
+                }
+          
                 catch{
                     print("error adding roundStats when empty")
                 }
                 
-            }
+        }else{
+          //  if let roundStats = realm.objects(RoundStats.self).first
+        }
+       
         }
     func calcDistance(firstPoint: CLLocationCoordinate2D, secondPoint: CLLocationCoordinate2D)-> Double{
              
