@@ -29,7 +29,7 @@ class StatsViewController: UITableViewController {
     var putts: Putter?
     var roundStats: RoundStats?
     var scores: Scores?
-    let customColor = 0x16393E
+  //  let customColor = 0x16393E
     let headerColor = UIColor(hex: 0x16393E)
     let sectionColor = UIColor(hex: 0xFDF8DB)
 
@@ -58,13 +58,6 @@ class StatsViewController: UITableViewController {
         tableView.separatorColor = UIColor.black
        
         tableView.insetsLayoutMarginsFromSafeArea = false
-        //tableView.contentInset = UIEdgeInsets.zero
-        if #available(iOS 11.0, *) {
-            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            
-        } else {
-            // Fallback for older iOS versions
-        }
        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         navigationController?.navigationBar.isTranslucent = false
     }

@@ -9,7 +9,6 @@ import UIKit
 import RealmSwift
 
 class homeViewController: UIViewController {
-
     var realm = try! Realm()
     var dataToPass: Results<Clubs>?
     var clubs: Results<Clubs>?
