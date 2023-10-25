@@ -74,14 +74,15 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         roundStats = realm.objects(RoundStats.self).first
         putts = realm.objects(Putter.self).first
         scores = realm.objects(Scores.self).first
-        fetchClubs()
-        fetchRoundStats()
+       // fetchClubs()
+        //fetchRoundStats()
         roundPar = UserDefaults.standard.integer(forKey: "roundPar")
+        clubSelectionLabel.setTitle("Select Club", for: .normal)
         holeNumberLabel.text = "1"
         pickerView.dataSource = self
         pickerView.delegate = self
-        pickerView.frame = CGRect(x: 100, y:200, width: 180, height: 120)
-        pickerView.backgroundColor = .gray
+        pickerView.frame = CGRect(x: 200, y:150, width: 180, height: 120)
+        pickerView.backgroundColor = .white
         pickerView.isOpaque = true
         pickerView.layer.opacity = 0.8
         pickerView.isHidden = true
@@ -113,7 +114,11 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
            view.addGestureRecognizer(tapGestureRecognizer)
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        
+        nextHoleLabel.titleLabel?.font = UIFont(name: "Impact", size: 25)
+//        clubSelectionLabel.contentHorizontalAlignment = .center
+//        clubSelectionLabel.contentVerticalAlignment = .center
+        clubSelectionLabel.titleLabel?.font = UIFont(name: "Impact", size: 20)
+     //   nextHoleLabel.frame = CGRect(x: 11, y: 593, width: 161, height: 51)
     }
 
     @IBAction func clubSelectionButton(_ sender: Any) {
@@ -167,18 +172,16 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
  
         }
         
-//        if clubString == "Change Club"{
-//            print("Change dat club")
-//        }
-        if clubString == "CHANGE THIS LATER UNCOMMENT ABOVE ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"{
-            print("Change dat club")
+        if clubString == "Select Club"{
+            let alert = UIAlertController(title: "Invalid Club", message: "Select a club pressing 'Select Club'", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Cancel", style: .default))
+            present(alert, animated: true, completion: nil)
+            
         }
         else if clubString == "Putter"{
             getLocation()
             logShot(clubString: clubString)
             updateUI()
-            girSelectionLabel.isEnabled = false
-            firSelectionLabel.isEnabled = false
             putterHitAmount += 1
 
             
@@ -189,11 +192,12 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
             getLocation()
             logShot(clubString: clubString)
             updateUI()
-            parSelection.isEnabled = false
+            //parSelection.isEnabled = false
             girSelectionLabel.isEnabled = true
             firSelectionLabel.isEnabled = true
  
         }
+        clubSelectionLabel.setTitle("Select Club", for: .normal)
         
     }
 
@@ -211,9 +215,6 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         firstPoint.latitude = 0
         firstPoint.longitude = 0
         if nextHoleLabel.currentTitle == "End Round"{
-            if let test = threeWood{
-                print(test.name)
-            }
             calcRound()
         }
         if holeNumber == 18 {
@@ -327,15 +328,11 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         }
 
         for roundClub in roundClubArray{
-        //   if  !roundClub.name.isEmpty {
-          
-                
+             
                 let mappedName = mapClubNames(roundClub.name)
     
                if let realmClub = clubs?.first(where: { $0.name == mappedName }){
                let totalHit =  realmClub.amountHit + roundClub.amountHit
-                   
-//                   print("realm amount his \(totalHit)")
 
                     do{
                         try realm.write{
@@ -350,41 +347,11 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
                // }
             }
         }
-    
-        
-//        performSegue(withIdentifier: "goToFinishedRound", sender: self)
         performSegue(withIdentifier: "goToEndRound", sender: self)
         
        
     }
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "goToFinishedRound"{
-//            if let finishedRoundVC = segue.destination as? FinishedRoundViewController{
-//                finishedRoundVC.driver = driver
-//                finishedRoundVC.threeWood = threeWood
-//                finishedRoundVC.hybrid = hybrid
-//                finishedRoundVC.fourIron = fourIron
-//                finishedRoundVC.fiveIron = fiveIron
-//                finishedRoundVC.sixIron = sixIron
-//                finishedRoundVC.sevenIron = sevenIron
-//                finishedRoundVC.eightIron = eightIron
-//                finishedRoundVC.nineIron = nineIron
-//                finishedRoundVC.pitchWedge = pitchWedge
-//                finishedRoundVC.approachWedge = approachWedge
-//                finishedRoundVC.sandWedge = sandWedge
-//                finishedRoundVC.lobWedge = lobWedge
-//                finishedRoundVC.putter = putter
-//                finishedRoundVC.putts = putts
-//                finishedRoundVC.roundStats = roundStats
-//                finishedRoundVC.girCount = girCount
-//                finishedRoundVC.girHit = girHit
-//                finishedRoundVC.firCount = firCount
-//                finishedRoundVC.firHit = firHit
-//                finishedRoundVC.roundScore = roundScore
-//            }
-//        }
-//    }
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "goToEndRound"{
             if let endRoundVC = segue.destination as? EndRoundCollectionViewController{
@@ -400,10 +367,16 @@ class StartRoundViewController: UIViewController, UIPickerViewDataSource, UIPick
         }
     }
     func changeHoleNumber() -> String{
-        holeNumber += 1
-        holeScoreLabel.text = "0"
-        holeScore = 0
-        return String(holeNumber)
+        if holeNumber == 18{
+            return String(holeNumber)
+        }else{
+            
+            
+            holeNumber += 1
+            holeScoreLabel.text = "0"
+            holeScore = 0
+            return String(holeNumber)
+        }
     }
     
     func logShot(clubString: String){
@@ -550,7 +523,7 @@ extension StartRoundViewController{
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         _ = clubOptions[row]
-        clubSelectionLabel.titleLabel?.text = clubOptions[row]
+      //  clubSelectionLabel.titleLabel?.text = clubOptions[row]
         print(clubOptions[row])
         
     }

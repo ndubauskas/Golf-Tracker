@@ -22,32 +22,29 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.99215686319999996" green="0.97254908080000002" blue="0.85882353779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-9F-QND">
-                        <rect key="frame" x="20" y="10" width="167" height="116"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbV-9F-QND">
+                        <rect key="frame" x="0.0" y="10" width="219.66666666666666" height="116"/>
                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <size key="shadowOffset" width="3" height="3"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qc-0G-M4o">
-                        <rect key="frame" x="300" y="83" width="60" height="55"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Qc-0G-M4o">
+                        <rect key="frame" x="332.66666666666669" y="75" width="27.333333333333314" height="57"/>
                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="45"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                         <color key="shadowColor" red="0.028725028038024902" green="0.026444310322403908" blue="0.042883522808551788" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <size key="shadowOffset" width="3" height="2"/>
                     </label>
-                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="fwz-kz-qVu">
-                        <rect key="frame" x="271" y="75" width="109" height="4"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="fwz-kz-qVu">
+                        <rect key="frame" x="303.66666666666669" y="64" width="86.333333333333314" height="4"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="trackTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </progressView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lJ-L0-LwL">
-                        <rect key="frame" x="300" y="20" width="60" height="55"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3lJ-L0-LwL">
+                        <rect key="frame" x="332.66666666666669" y="0.0" width="27.333333333333314" height="57"/>
                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="45"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
@@ -58,6 +55,20 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" systemColor="systemIndigoColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6Qc-0G-M4o" secondAttribute="trailing" constant="40" id="4d9-ij-PHE"/>
+                <constraint firstItem="nbV-9F-QND" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="6P1-Nv-fKg"/>
+                <constraint firstItem="6Qc-0G-M4o" firstAttribute="leading" secondItem="nbV-9F-QND" secondAttribute="trailing" constant="113" id="E89-Pf-1Sk"/>
+                <constraint firstItem="3lJ-L0-LwL" firstAttribute="leading" secondItem="nbV-9F-QND" secondAttribute="trailing" constant="113" id="Kmg-hw-yfh"/>
+                <constraint firstItem="6Qc-0G-M4o" firstAttribute="top" secondItem="fwz-kz-qVu" secondAttribute="bottom" constant="7" id="Q9D-Nv-BBj"/>
+                <constraint firstAttribute="trailing" secondItem="fwz-kz-qVu" secondAttribute="trailing" constant="10" id="SPG-ck-qMv"/>
+                <constraint firstAttribute="bottom" secondItem="nbV-9F-QND" secondAttribute="bottom" constant="24" id="TXe-Z4-AGE"/>
+                <constraint firstItem="3lJ-L0-LwL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" symbolic="YES" id="doh-tq-9g0"/>
+                <constraint firstAttribute="trailing" secondItem="3lJ-L0-LwL" secondAttribute="trailing" constant="40" id="noF-bb-057"/>
+                <constraint firstItem="nbV-9F-QND" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" symbolic="YES" id="pae-oZ-FiX"/>
+                <constraint firstItem="fwz-kz-qVu" firstAttribute="leading" secondItem="nbV-9F-QND" secondAttribute="trailing" constant="84" id="qFl-IO-CgS"/>
+                <constraint firstItem="fwz-kz-qVu" firstAttribute="top" secondItem="3lJ-L0-LwL" secondAttribute="bottom" constant="7" id="zGI-gS-juc"/>
+            </constraints>
             <size key="customSize" width="584" height="266"/>
             <connections>
                 <outlet property="firCountLabel" destination="6Qc-0G-M4o" id="Pi1-yy-dxo"/>

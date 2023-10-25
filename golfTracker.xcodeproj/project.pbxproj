@@ -11,6 +11,7 @@
 		061682A12ADDBF69008E5E17 /* RoundClubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061682A02ADDBF69008E5E17 /* RoundClubs.swift */; };
 		061682A32ADDC003008E5E17 /* RoundScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061682A22ADDC003008E5E17 /* RoundScores.swift */; };
 		061682AD2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061682AC2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift */; };
+		0618C7022AE6F49A00EDA800 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618C7012AE6F49A00EDA800 /* HomeTabBarViewController.swift */; };
 		06847DB42AE1DDFA002E5417 /* FIRCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06847DB22AE1DDFA002E5417 /* FIRCollectionViewCell.swift */; };
 		06847DB52AE1DDFA002E5417 /* FIRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06847DB32AE1DDFA002E5417 /* FIRCollectionViewCell.xib */; };
 		06847DB82AE1E2EC002E5417 /* GIRCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06847DB62AE1E2EC002E5417 /* GIRCollectionViewCell.swift */; };
@@ -59,6 +60,7 @@
 		061682A02ADDBF69008E5E17 /* RoundClubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundClubs.swift; sourceTree = "<group>"; };
 		061682A22ADDC003008E5E17 /* RoundScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundScores.swift; sourceTree = "<group>"; };
 		061682AC2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRoundCollectionViewController.swift; sourceTree = "<group>"; };
+		0618C7012AE6F49A00EDA800 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
 		06847DB22AE1DDFA002E5417 /* FIRCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRCollectionViewCell.swift; sourceTree = "<group>"; };
 		06847DB32AE1DDFA002E5417 /* FIRCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FIRCollectionViewCell.xib; sourceTree = "<group>"; };
 		06847DB62AE1E2EC002E5417 /* GIRCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIRCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				06F5D5EB2ABE13AF001B5BAF /* homeViewController.swift */,
+				0618C7012AE6F49A00EDA800 /* HomeTabBarViewController.swift */,
 				0699AB532ABE4BC800E30B9D /* StatsViewController.swift */,
 				0699B1E62AC33D0E00E25C3C /* ParViewController.swift */,
 				0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */,
@@ -503,6 +506,7 @@
 				06F5D5E82ABE13AF001B5BAF /* AppDelegate.swift in Sources */,
 				0616829F2AD4BCAF008E5E17 /* StartRoundViewController.swift in Sources */,
 				06F5D5EA2ABE13AF001B5BAF /* SceneDelegate.swift in Sources */,
+				0618C7022AE6F49A00EDA800 /* HomeTabBarViewController.swift in Sources */,
 				061682AD2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift in Sources */,
 				06847DBC2AE1E32E002E5417 /* PuttsCollectionViewCell.swift in Sources */,
 			);

@@ -11,15 +11,16 @@ private let reuseIdentifier = "Cell"
 
 class EndRoundCollectionViewController: UICollectionViewController {
 
-    var girCount: Int = 30
-    var firCount: Int = 30
-    var girHit: Int = 30
-    var firHit: Int = 30
-    var roundScore: Int = 70
-    var roundPar: Int = 72
-    var putterHitAmount = 30
-    var par: Int = 30
+    var girCount: Int = 0
+    var firCount: Int = 0
+    var girHit: Int = 0
+    var firHit: Int = 0
+    var roundScore: Int = 0
+    var roundPar: Int = 0
+    var putterHitAmount = 0
+    var par: Int = 0
     var statNames: [String] = ["GIR", "FIR", "Putts", "Score"]
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.register(UINib(nibName: "FIRCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "FIRCell")
@@ -27,13 +28,19 @@ class EndRoundCollectionViewController: UICollectionViewController {
            collectionView.register(UINib(nibName: "PuttsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "PuttsCell")
            collectionView.register(UINib(nibName: "RoundScoreCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "RoundScoreCell")
         par = roundScore - roundPar
-     
+
         let customLayout = CustomFlowLayout()
             collectionView.collectionViewLayout = customLayout
     }
 
    
-        override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    
+    @IBAction func goToHomeButtonPressed(_ sender: Any) {
+        print(":D")
+       
+        performSegue(withIdentifier: "goToHome", sender: self)
+    }
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
     }
@@ -56,8 +63,6 @@ class EndRoundCollectionViewController: UICollectionViewController {
                    // Configure the cell with data
                    cell.label.text = "Fairways in Regulation"
                    cell.label.textColor = .white
-                   firHit = 70
-                   firCount = 80
                    cell.firHitLabel.text = "\(firHit)"
                    cell.firCountLabel.text = "\(firCount)"
 //                   cell.layer.borderWidth = 1.0
@@ -70,7 +75,6 @@ class EndRoundCollectionViewController: UICollectionViewController {
                    // Configure the cell with data
                    cell.label.text = "Greens in Regulation"
                    cell.girHitLabel.text = "\(girHit)"
-                   girCount = 70
                    cell.girCountLabel.text = "\(girCount)"
 
 //
@@ -120,8 +124,8 @@ class EndRoundCollectionViewController: UICollectionViewController {
                
        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FIRCell", for: indexPath) as! FIRCollectionViewCell
            cell.label.text = "Unknown"
-       //cell.isHidden = true
            return cell
+       
   }
 
 
@@ -129,13 +133,17 @@ class EndRoundCollectionViewController: UICollectionViewController {
 class CustomFlowLayout: UICollectionViewFlowLayout {
     override func prepare() {
         super.prepare()
-        
+
         if let collectionView = collectionView {
             let spacing: CGFloat = 0.5
-            
+
             let availableWidth = collectionView.bounds.width - (spacing * 3)
-            
-//            let itemWidth = availableWidth / 2
+
+            // Adjust the section insets and content insets to remove spacing
+            sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+            sectionInsetReference = .fromContentInset
+            sectionInset.top = 0 // Set the top section inset to 0
+            sectionInset.bottom = 0 // Set the bottom section inset to 0
             
             itemSize = CGSize(width: availableWidth, height: 150)
             minimumInteritemSpacing = spacing
@@ -143,3 +151,4 @@ class CustomFlowLayout: UICollectionViewFlowLayout {
         }
     }
 }
+

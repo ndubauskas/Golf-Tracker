@@ -65,24 +65,24 @@ class homeViewController: UIViewController {
                 
             }
         }
-//        if segue.identifier == "goToStats"{
-//            if let statsVC = segue.destination as? ParViewController {
-//                statsVC.driver = driver
-//                statsVC.threeWood = threeWood
-//                statsVC.hybrid = hybrid
-//                statsVC.fourIron = fourIron
-//                statsVC.fiveIron = fiveIron
-//                statsVC.sixIron = sixIron
-//                statsVC.sevenIron = sevenIron
-//                statsVC.eightIron = eightIron
-//                statsVC.nineIron = nineIron
-//                statsVC.pitchWedge = pitchWedge
-//                statsVC.approachWedge = approachWedge
-//                statsVC.sandWedge = sandWedge
-//                statsVC.lobWedge = lobWedge
-//                statsVC.putter = putter
-//            }
-//        }
+        if segue.identifier == "goToStats"{
+            if let statsVC = segue.destination as? ParViewController {
+                statsVC.driver = driver
+                statsVC.threeWood = threeWood
+                statsVC.hybrid = hybrid
+                statsVC.fourIron = fourIron
+                statsVC.fiveIron = fiveIron
+                statsVC.sixIron = sixIron
+                statsVC.sevenIron = sevenIron
+                statsVC.eightIron = eightIron
+                statsVC.nineIron = nineIron
+                statsVC.pitchWedge = pitchWedge
+                statsVC.approachWedge = approachWedge
+                statsVC.sandWedge = sandWedge
+                statsVC.lobWedge = lobWedge
+                statsVC.putter = putter
+            }
+        }
     }
 
     
