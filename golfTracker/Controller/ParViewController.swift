@@ -29,12 +29,18 @@ class ParViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         parText.delegate = self
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        self.view.addGestureRecognizer(tapGestureRecognizer)
+
     }
     
     
     @IBOutlet weak var parText: UITextField!
     
-    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        view.endEditing(true)
+    }
+
     @IBAction func startRoundButtonPressed(_ sender: Any) {
         if let text = parText.text, let par = Int(text), par >= 57 && par < 80 {
             performSegue(withIdentifier: "goToStartRound", sender: par)
@@ -63,8 +69,8 @@ class ParViewController: UIViewController, UITextFieldDelegate {
                 startRoundVC.sandWedge = sandWedge
                 startRoundVC.lobWedge = lobWedge
                 startRoundVC.putter = putter
-                
-                
+
+
             }
         }
     }

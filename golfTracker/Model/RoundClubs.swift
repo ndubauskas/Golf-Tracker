@@ -8,9 +8,9 @@
 import Foundation
 
 struct RoundClubs{
-    let name = ""
+    var name = ""
     var avgDistance = 0.0
     var amountHit = 0
     var longestDistance = 0.0
-    
+    var totalDistance = 0.0
 }

@@ -10,6 +10,16 @@
 		0616829F2AD4BCAF008E5E17 /* StartRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */; };
 		061682A12ADDBF69008E5E17 /* RoundClubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061682A02ADDBF69008E5E17 /* RoundClubs.swift */; };
 		061682A32ADDC003008E5E17 /* RoundScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061682A22ADDC003008E5E17 /* RoundScores.swift */; };
+		061682AD2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061682AC2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift */; };
+		0618C7022AE6F49A00EDA800 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0618C7012AE6F49A00EDA800 /* HomeTabBarViewController.swift */; };
+		06847DB42AE1DDFA002E5417 /* FIRCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06847DB22AE1DDFA002E5417 /* FIRCollectionViewCell.swift */; };
+		06847DB52AE1DDFA002E5417 /* FIRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06847DB32AE1DDFA002E5417 /* FIRCollectionViewCell.xib */; };
+		06847DB82AE1E2EC002E5417 /* GIRCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06847DB62AE1E2EC002E5417 /* GIRCollectionViewCell.swift */; };
+		06847DB92AE1E2EC002E5417 /* GIRCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06847DB72AE1E2EC002E5417 /* GIRCollectionViewCell.xib */; };
+		06847DBC2AE1E32E002E5417 /* PuttsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06847DBA2AE1E32E002E5417 /* PuttsCollectionViewCell.swift */; };
+		06847DBD2AE1E32E002E5417 /* PuttsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06847DBB2AE1E32E002E5417 /* PuttsCollectionViewCell.xib */; };
+		06847DC02AE1E34C002E5417 /* RoundScoreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06847DBE2AE1E34C002E5417 /* RoundScoreCollectionViewCell.swift */; };
+		06847DC12AE1E34C002E5417 /* RoundScoreCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06847DBF2AE1E34C002E5417 /* RoundScoreCollectionViewCell.xib */; };
 		0699AB522ABE4AD400E30B9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0699AB502ABE4AD400E30B9D /* Main.storyboard */; };
 		0699AB542ABE4BC800E30B9D /* StatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699AB532ABE4BC800E30B9D /* StatsViewController.swift */; };
 		0699B1E52AC2196E00E25C3C /* Clubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699B1E42AC2196E00E25C3C /* Clubs.swift */; };
@@ -49,6 +59,16 @@
 		0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StartRoundViewController.swift; path = golfTracker/StartRoundViewController.swift; sourceTree = SOURCE_ROOT; };
 		061682A02ADDBF69008E5E17 /* RoundClubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundClubs.swift; sourceTree = "<group>"; };
 		061682A22ADDC003008E5E17 /* RoundScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundScores.swift; sourceTree = "<group>"; };
+		061682AC2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndRoundCollectionViewController.swift; sourceTree = "<group>"; };
+		0618C7012AE6F49A00EDA800 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
+		06847DB22AE1DDFA002E5417 /* FIRCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRCollectionViewCell.swift; sourceTree = "<group>"; };
+		06847DB32AE1DDFA002E5417 /* FIRCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FIRCollectionViewCell.xib; sourceTree = "<group>"; };
+		06847DB62AE1E2EC002E5417 /* GIRCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIRCollectionViewCell.swift; sourceTree = "<group>"; };
+		06847DB72AE1E2EC002E5417 /* GIRCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GIRCollectionViewCell.xib; sourceTree = "<group>"; };
+		06847DBA2AE1E32E002E5417 /* PuttsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PuttsCollectionViewCell.swift; sourceTree = "<group>"; };
+		06847DBB2AE1E32E002E5417 /* PuttsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PuttsCollectionViewCell.xib; sourceTree = "<group>"; };
+		06847DBE2AE1E34C002E5417 /* RoundScoreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundScoreCollectionViewCell.swift; sourceTree = "<group>"; };
+		06847DBF2AE1E34C002E5417 /* RoundScoreCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundScoreCollectionViewCell.xib; sourceTree = "<group>"; };
 		0699AB512ABE4AD400E30B9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0699AB532ABE4BC800E30B9D /* StatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsViewController.swift; sourceTree = "<group>"; };
 		0699B1E42AC2196E00E25C3C /* Clubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clubs.swift; sourceTree = "<group>"; };
@@ -136,8 +156,6 @@
 				06F5D61A2ABE13C0001B5BAF /* Data Manager */,
 				06F5D5E72ABE13AF001B5BAF /* AppDelegate.swift */,
 				06F5D5E92ABE13AF001B5BAF /* SceneDelegate.swift */,
-				0699AB502ABE4AD400E30B9D /* Main.storyboard */,
-				06F5D5F52ABE13B0001B5BAF /* LaunchScreen.storyboard */,
 				06F5D5F32ABE13B0001B5BAF /* Assets.xcassets */,
 				06F5D5F82ABE13B0001B5BAF /* Info.plist */,
 			);
@@ -174,9 +192,15 @@
 			isa = PBXGroup;
 			children = (
 				06F5D5EB2ABE13AF001B5BAF /* homeViewController.swift */,
+				0618C7012AE6F49A00EDA800 /* HomeTabBarViewController.swift */,
 				0699AB532ABE4BC800E30B9D /* StatsViewController.swift */,
 				0699B1E62AC33D0E00E25C3C /* ParViewController.swift */,
 				0616829E2AD4BCAF008E5E17 /* StartRoundViewController.swift */,
+				061682AC2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift */,
+				06847DB22AE1DDFA002E5417 /* FIRCollectionViewCell.swift */,
+				06847DB62AE1E2EC002E5417 /* GIRCollectionViewCell.swift */,
+				06847DBA2AE1E32E002E5417 /* PuttsCollectionViewCell.swift */,
+				06847DBE2AE1E34C002E5417 /* RoundScoreCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -184,6 +208,12 @@
 		06F5D61C2ABE13D4001B5BAF /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0699AB502ABE4AD400E30B9D /* Main.storyboard */,
+				06F5D5F52ABE13B0001B5BAF /* LaunchScreen.storyboard */,
+				06847DB32AE1DDFA002E5417 /* FIRCollectionViewCell.xib */,
+				06847DB72AE1E2EC002E5417 /* GIRCollectionViewCell.xib */,
+				06847DBB2AE1E32E002E5417 /* PuttsCollectionViewCell.xib */,
+				06847DBF2AE1E34C002E5417 /* RoundScoreCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -330,8 +360,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0699AB522ABE4AD400E30B9D /* Main.storyboard in Resources */,
+				06847DBD2AE1E32E002E5417 /* PuttsCollectionViewCell.xib in Resources */,
 				06F5D5F72ABE13B0001B5BAF /* LaunchScreen.storyboard in Resources */,
+				06847DB52AE1DDFA002E5417 /* FIRCollectionViewCell.xib in Resources */,
+				06847DB92AE1E2EC002E5417 /* GIRCollectionViewCell.xib in Resources */,
 				06F5D5F42ABE13B0001B5BAF /* Assets.xcassets in Resources */,
+				06847DC12AE1E34C002E5417 /* RoundScoreCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -459,6 +493,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06847DB42AE1DDFA002E5417 /* FIRCollectionViewCell.swift in Sources */,
+				06847DC02AE1E34C002E5417 /* RoundScoreCollectionViewCell.swift in Sources */,
+				06847DB82AE1E2EC002E5417 /* GIRCollectionViewCell.swift in Sources */,
 				0699B1E72AC33D0E00E25C3C /* ParViewController.swift in Sources */,
 				061682A32ADDC003008E5E17 /* RoundScores.swift in Sources */,
 				0699AB542ABE4BC800E30B9D /* StatsViewController.swift in Sources */,
@@ -469,6 +506,9 @@
 				06F5D5E82ABE13AF001B5BAF /* AppDelegate.swift in Sources */,
 				0616829F2AD4BCAF008E5E17 /* StartRoundViewController.swift in Sources */,
 				06F5D5EA2ABE13AF001B5BAF /* SceneDelegate.swift in Sources */,
+				0618C7022AE6F49A00EDA800 /* HomeTabBarViewController.swift in Sources */,
+				061682AD2AE1A46E008E5E17 /* EndRoundCollectionViewController.swift in Sources */,
+				06847DBC2AE1E32E002E5417 /* PuttsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

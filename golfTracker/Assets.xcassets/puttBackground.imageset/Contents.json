@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "background.jpeg",
+      "filename" : "puttBackground.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "background 1.jpeg",
+      "filename" : "puttBackground 1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "background 2.jpeg",
+      "filename" : "puttBackground 2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -10,7 +10,7 @@ import RealmSwift
 
 class Clubs: Object{
     @objc dynamic var name: String = ""
-    @objc dynamic var avgDistance: Float = 0.0
+    @objc dynamic var avgDistance: Double = 0.0
     @objc dynamic var longestDistance: Int = 0
     @objc dynamic var amountHit: Int = 0
     
@@ -18,9 +18,9 @@ class Clubs: Object{
 }
 
 class Putter: Object{
-    @objc dynamic var name: String = ""
-    @objc dynamic var amountHit: Int = 0
-    @objc dynamic var avgPutts: Float = 0.0
+    @objc dynamic var avgPuttsPerRound: Double = 0.0
+    @objc dynamic var totalAmountOfPutts: Int = 0
+    
 }
 
 
