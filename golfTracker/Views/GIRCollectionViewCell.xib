@@ -16,10 +16,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="green" translatesAutoresizingMaskIntoConstraints="NO" id="SY7-MX-LcD">
-                        <rect key="frame" x="-31" y="-101" width="492" height="309"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC7-UC-Q4v">
                         <rect key="frame" x="315" y="0.0" width="45" height="57"/>
                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="45"/>
@@ -52,7 +48,7 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="0.012189300730824471" green="0.99215966463088989" blue="0.84295558929443359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="HnZ-oi-DBT" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" symbolic="YES" id="54M-Ui-egU"/>
                 <constraint firstItem="HnZ-oi-DBT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="14" id="56K-pq-aVx"/>
@@ -76,7 +72,4 @@
             <point key="canvasLocation" x="21.374045801526716" y="45.070422535211272"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="green" width="341.33334350585938" height="341.33334350585938"/>
-    </resources>
 </document>

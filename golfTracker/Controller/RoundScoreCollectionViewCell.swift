@@ -8,13 +8,15 @@
 import UIKit
 
 class RoundScoreCollectionViewCell: UICollectionViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var roundScoreLabel: UILabel!
     @IBOutlet weak var scoreDifferenceLabel: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.borderWidth = 4.0
+               layer.borderColor = UIColor.white.cgColor
+               layer.cornerRadius = 8.0
+    }
+ 
 }

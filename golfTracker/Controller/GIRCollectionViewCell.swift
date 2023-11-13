@@ -9,13 +9,16 @@ import UIKit
 
 class GIRCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        
-        super.awakeFromNib()
-        // Initialization code
-    }
-
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var girHitLabel: UILabel!
     @IBOutlet weak var girCountLabel: UILabel!
+    override func awakeFromNib() {
+        
+        super.awakeFromNib()
+        layer.borderWidth = 4.0
+               layer.borderColor = UIColor.white.cgColor
+               layer.cornerRadius = 8.0
+    }
+
+  
 }

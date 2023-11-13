@@ -576,12 +576,10 @@ class StatsViewController: UITableViewController {
         //putts = realm.objects(Putter.self).first
 
         if let putts = putts {
-            // Putts object already exists, print its data for debugging
             print("Putts already exists:")
             print("Avg Putts Per Round: \(putts.avgPuttsPerRound)")
             print("Total Amount of Putts: \(putts.totalAmountOfPutts)")
         } else {
-            // Putts object doesn't exist, attempt to add a new one
             do {
                 try realm.write {
                     let newPutts = Putter()
@@ -637,7 +635,7 @@ class StatsViewController: UITableViewController {
                 }
                 
         }else{
-          //  if let roundStats = realm.objects(RoundStats.self).first
+    
         }
        
         }

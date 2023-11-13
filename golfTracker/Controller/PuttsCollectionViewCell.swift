@@ -9,10 +9,13 @@ import UIKit
 
 class PuttsCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var amountOfPuttsLabel: UILabel!
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        layer.borderWidth = 4.0
+               layer.borderColor = UIColor.white.cgColor
+               layer.cornerRadius = 8.0
+    }
+   
 }

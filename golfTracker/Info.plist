@@ -3,9 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>Need location to find current location for distances</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>UIUserInterfaceStyle</key>
 	<string></string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Need location to find current location for Yardages</string>
+	<string>Need location to find current location for distances</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

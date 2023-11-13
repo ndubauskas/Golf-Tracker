@@ -16,9 +16,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="400" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="puttBackground" translatesAutoresizingMaskIntoConstraints="NO" id="OQH-qr-vSZ">
-                        <rect key="frame" x="-30" y="-108" width="448" height="293"/>
-                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s4g-gK-dtB">
                         <rect key="frame" x="10" y="10" width="79.666666666666671" height="116"/>
                         <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="35"/>
@@ -41,16 +38,12 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="0.013825858943164349" green="0.97730237245559692" blue="0.89441865682601929" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.14901961389999999" green="0.2588235438" blue="0.27843138579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="y72-1k-wYp" secondAttribute="trailing" constant="24" id="6s0-cV-9gc"/>
-                <constraint firstAttribute="bottom" secondItem="OQH-qr-vSZ" secondAttribute="bottom" constant="-35" id="9wM-v9-76y"/>
-                <constraint firstAttribute="trailing" secondItem="OQH-qr-vSZ" secondAttribute="trailing" constant="-18" id="IPj-cZ-x4B"/>
-                <constraint firstItem="OQH-qr-vSZ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="-108" id="JsT-nD-Fvs"/>
                 <constraint firstItem="s4g-gK-dtB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="NZh-Z4-2Aa"/>
                 <constraint firstItem="s4g-gK-dtB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="VA9-65-i9Q"/>
                 <constraint firstItem="y72-1k-wYp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="39" id="VMe-fG-bIe"/>
-                <constraint firstItem="OQH-qr-vSZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="-30" id="jef-jX-4Di"/>
                 <constraint firstAttribute="bottom" secondItem="s4g-gK-dtB" secondAttribute="bottom" constant="24" id="nb3-Is-5NY"/>
             </constraints>
             <size key="customSize" width="448" height="140"/>
@@ -61,7 +54,4 @@
             <point key="canvasLocation" x="384.73282442748092" y="51.408450704225352"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <image name="puttBackground" width="341.33334350585938" height="341.33334350585938"/>
-    </resources>
 </document>

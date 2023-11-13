@@ -24,7 +24,7 @@ class ParViewController: UIViewController, UITextFieldDelegate {
     var sandWedge: Clubs?
     var lobWedge: Clubs?
     var putter: Clubs?
-
+    let sectionColor = UIColor(hex: 0xFDF8DB)
     override func viewDidLoad() {
         super.viewDidLoad()
         

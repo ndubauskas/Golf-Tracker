@@ -27,7 +27,6 @@
 		0699B1E92AC36BEA00E25C3C /* Scores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0699B1E82AC36BEA00E25C3C /* Scores.swift */; };
 		06F5D5E82ABE13AF001B5BAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D5E72ABE13AF001B5BAF /* AppDelegate.swift */; };
 		06F5D5EA2ABE13AF001B5BAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D5E92ABE13AF001B5BAF /* SceneDelegate.swift */; };
-		06F5D5EC2ABE13AF001B5BAF /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D5EB2ABE13AF001B5BAF /* homeViewController.swift */; };
 		06F5D5F42ABE13B0001B5BAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06F5D5F32ABE13B0001B5BAF /* Assets.xcassets */; };
 		06F5D5F72ABE13B0001B5BAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06F5D5F52ABE13B0001B5BAF /* LaunchScreen.storyboard */; };
 		06F5D6022ABE13B0001B5BAF /* golfTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06F5D6012ABE13B0001B5BAF /* golfTrackerTests.swift */; };
@@ -77,7 +76,6 @@
 		06F5D5E42ABE13AF001B5BAF /* golfTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = golfTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06F5D5E72ABE13AF001B5BAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06F5D5E92ABE13AF001B5BAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		06F5D5EB2ABE13AF001B5BAF /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		06F5D5F32ABE13B0001B5BAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06F5D5F62ABE13B0001B5BAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06F5D5F82ABE13B0001B5BAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -191,7 +189,6 @@
 		06F5D61B2ABE13CE001B5BAF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				06F5D5EB2ABE13AF001B5BAF /* homeViewController.swift */,
 				0618C7012AE6F49A00EDA800 /* HomeTabBarViewController.swift */,
 				0699AB532ABE4BC800E30B9D /* StatsViewController.swift */,
 				0699B1E62AC33D0E00E25C3C /* ParViewController.swift */,
@@ -502,7 +499,6 @@
 				061682A12ADDBF69008E5E17 /* RoundClubs.swift in Sources */,
 				0699B1E52AC2196E00E25C3C /* Clubs.swift in Sources */,
 				0699B1E92AC36BEA00E25C3C /* Scores.swift in Sources */,
-				06F5D5EC2ABE13AF001B5BAF /* homeViewController.swift in Sources */,
 				06F5D5E82ABE13AF001B5BAF /* AppDelegate.swift in Sources */,
 				0616829F2AD4BCAF008E5E17 /* StartRoundViewController.swift in Sources */,
 				06F5D5EA2ABE13AF001B5BAF /* SceneDelegate.swift in Sources */,
